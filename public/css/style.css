@@ -1,0 +1,39 @@
+body {
+    height: 100px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 45px;
+}
+
+h2 {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1em;
+}
+
+h2, h3, h4, p {
+font-family: 'Open Sans Condensed', sans-serif;
+}
+
+#addNewBurger {
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.current-menu {
+    padding-top: 5px;
+    font-family: 'Playfair Display', serif;
+    background-color: white;
+}
+
+.container-menu{
+    background-color: white;
+}
+.burgers {
+    background-color: white;
+}
+
