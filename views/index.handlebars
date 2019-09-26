@@ -1,23 +1,41 @@
+<div class="container">
 
-<h1>Eat-Da-Burger!!!</h1>
-{{!-- <img id="hamburger-image" alt="Burger"> --}}
-<h2>Enter a burger you want to eat</h2>
-<h3> Click the Submit button</h3>
-
-<ul>
-  {{#each burger}}
-    {{#unless this.devoured}}
-</ul>
-
-
-
-<h2>Add a Burger</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="name">
+<div class="jumbotron jumbotron-fluid jumbo-one">
+  <div class="container">
+    <h1 class="display-4 text-center">Eat Da Burger</h1>
+    <p class="lead text-center">Add a burger you want to eat and click the submit button.</p>
   </div>
 
-  <button type="submit">Add Burger</button>
-</form> 
+      <div class="form-group">
+        <form class="text-center">
+              <input type="text" id="burger_name" name="burger_name">
+              <button type="submit" id="addNewBurger">Submit</button>
+        </form>
+      </div>
+</div>
+
+  <div class="container container-menu">
+
+  <div class="row burger-row">
+    <div class="col-2"></div>
+    <div class="col-4 menuDiv" id="menu">
+      <h2 class="current-menu">MENU:</h2>
+      {{#each burgers}}
+      {{#unless devoured}}
+      {{> menu devoured=true}}
+      {{/unless}}
+      {{/each}}
+    </div>
+
+    <div class="col-4 menuDiv" id="menu">
+      <h2 class="current-menu">DEVOURED:</h2>
+
+      {{#each burgers}}
+      {{#if devoured}}
+      {{> menu devoured=false}}
+      {{/if}}
+      {{/each}}
+    </div>
+  </div>
+
+  </div>

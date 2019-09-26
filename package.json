@@ -2,8 +2,10 @@
   "name": "burger",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
+    "start": "node server.js",
+    "watch": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,11 +19,14 @@
   },
   "homepage": "https://github.com/chuckthefrenchie/burger#readme",
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "dotenv": "^8.1.0",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
-    "method-override": "^3.0.0",
     "mysql": "^2.17.1",
+    "path": "^0.12.7",
     "sequelize": "^5.19.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.2"
   }
 }
