@@ -18,7 +18,19 @@ connection.connect(function(err) {
     return;
   }
   console.log("connected as id " + connection.threadId);
-  
+  connection.query(`
+  CREATE TABLE IF NOT EXISTS burgers
+  (
+  id INT NOT NULL AUTO_INCREMENT,
+  name VARCHAR(100) NOT NULL,
+  devoured BOOLEAN DEFAULT false,
+  PRIMARY KEY (id)
+  );
+  `, function (err, result) {
+    if (err) {
+        console.error(err)
+    }
+  });
 });
 
 module.exports = connection;
